@@ -1,0 +1,61 @@
+Tygrys jest to bot discord napisany dla serwera KATARN KOMANDO.
+Ma on na celu zaautomatyzować procesy na serwerze dotyczące liczenia, biurokracji.
+W tej documentacji poznasz funkcje bota, jego parametry oraz typy błędów.
+
+Developer i Development
+Developerem jest administrator zwany Proboszczem. Cały bot jest napisany w języku programowania Python.
+Bot jest na hostingu 24/7. Developer posiada kopie kodu na własnym, prywatnym (z możliwością zmiany) repozytorium na GitHub (platforma gdzie programiści trzymają kod, współpracują nad 1 projektem itp.) oraz na własnych nośnikach danych
+Dołączając do jednostki użytkownik automatycznie zgadza się na przechowywanie jego danych, zostaną one podane poniżej.
+
+Bot
+Bot jest obecnie w wersji 1.2 (stan na 11.11.2026r.). 
+Przyjmuje on następujące parametry:
+Nick - jako text, string (str)
+Liczbę pochwał - jako liczbę całkowitą, integer (int)
+Liczbę uwag - jako liczbę całkowitą, integer (int)
+Liczbę punktów - jako liczbę całkowitą, integer (int)
+Liczbę obecności na treningach - jako liczbę całkowitą, integer (int)
+Liczbę zwolnień z treningów - jako liczbę całkowitą, integer (int)
+Liczbę nieobceności na treningach - jako liczbę całkowitą, integer (int)
+Bot zapisuje dane na hostingu od razu po wprowadzeniu zmiany. 
+Natomiast na GitHub co 4 - 5 min, bądź na komende. 
+Developer może pobrać kopie danych w każdej chwili.
+
+
+Aby użyć bota należy przed funkcją wpisać '$' bądź '/'
+
+helping
+Funkcja ta powoduje wypisanie wszystkich dostępnych funkcji, które bot posiada, a możesz je użyć.
+
+russia
+Funkcja ta wywołuje wysłanie przez bota flage rosji.
+
+hello
+Funkcja powoduje, że bot się przywita z tobą
+
+dane 
+Funkcja wywołuje pokazywanie wszystkich użytkowników zarejestrowanych w bazie z ich parametrami, pokazuje to jako lista ([]), a parametry jako oznaczenie cudzysłowia ("" albo '')
+
+losowanie
+Funkcja która umożliwia losowanie drużyn podczas treningu.
+Na początku bot prosi o liczbę żołnierzy jaka będzie losowana (najczęściej liczba ich jaka jest na treningu), należy podać liczbę całkowitą.
+Następnie bot każe nam wprowadzić tyle nicków żołnierzy jaką podaliśmy, co należy uczynić, nie ma możlwości tu zwiększenia lub zmniejszanie liczby żołnierzy w funckji losującej.
+Po tym bot losuję osoby do 2 drużyn, pokazując to na bierząco, po czym na końcu pokazuje ostateczny skład teamu (drużyny) 1 i teamu 2
+Na końcu należy mu poddać 1 albo 2 w zależności czy chcemy losowanie kontynuować czy też nie
+
+new_solider
+Funkcja ta wywołuje dodawanie nowego żołnierza, na początku należy wprowadzić jego nick (bez pingowania i stopnia). Następnie dać jako liczbę całkowitą, liczbę uwag, pochwał, obecności na treningach, zwolnień z treningów i nieobecności na treningach.
+
+zmien
+Funkcja ta pozwala edytować dane użytkowników, zmienić liczbę punktów (dodać, odjąć), dodaćuwagi i pochwały.
+Na początku należy wprowadzić nick gracza, następnie wybrać, co zmieniasz (1. uwagi, 2. pochwały, 3 punkty).
+Do uwag i pochwał należy podać liczbę dodawanych uwag/pochwał.
+Do punktów należy podać liczbę dodawanych/odejmowanych punktów. A później czy dodajemy czy odejmujemy (1. Dodaj 2. Odejmij).
+
+user_trening
+Funkcja pozwala na wprowadzenia wszystkich danych co do obecności na treningu, należy każdy parametr, oprócz początku i końca podawać znak ',' , ponieważ między tymi znakami są parametry i znak nowej lini który jest usuwany.
+Można podać nieograniczoną liczbę użytkowników. Należy podać prawidłową nazwę, która jest w bazie danych
+Bot dodaje 1 punkt do zaznaczonej kategorii
+1 = obecny na treningu
+0 = zwolniony z treningu
+-1 = nieobecny na treninug bez zwolnienia.
