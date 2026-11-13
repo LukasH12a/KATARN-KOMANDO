@@ -1,0 +1,29 @@
+:root{
+    --color_main: #0f0f0f;
+    --color_1: #501515;
+    --color_2: #ffffffc7;
+    color: var(--color_2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--color_main);
+}
+header{
+    width: 1200px;
+    background-color: var(--color_1);
+    width: 120px; 
+    height: 200px;
+}
+header h1 {
+    float: left;
+    width: 190px;
+}
+header img {
+    width: 110px; 
+    height: 180px;
+    padding: 10px;
+}
